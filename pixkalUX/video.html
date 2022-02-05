@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+  video#myVideo { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+
+    background-size: cover; 
+}
+  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Pixkal Video</title>
+</head>
+<body>
+
+<video id="myVideo" controls autoplay>
+
+</video>
+  <script>
+    clipPaths = [
+      'videos/meli.mp4',
+    ];
+    var myVideo = document.getElementById('myVideo');
+    myVideo.addEventListener('ended',myHandler,false);
+
+    function myHandler(e) {
+      var randClip = clipPaths[Math.floor(Math.random() * clipPaths.length)];
+      myVideo.setAttribute('src',randClip);
+    }
+    var randClip = clipPaths[Math.floor(Math.random() * clipPaths.length)];
+
+    myVideo.setAttribute('src',randClip);
+
+
+  </script>
+  </body>
+</html>

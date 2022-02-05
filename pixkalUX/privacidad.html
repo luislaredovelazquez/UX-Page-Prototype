@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Pixkal</title>
+
+    <script>
+      //load TrackerJS
+      !(function(t, n, e, o, a) {
+        function d(t) {
+          var n = ~~(Date.now() / 3e5),
+            o = document.createElement(e);
+          (o.async = !0), (o.src = t + "?ts=" + n);
+          var a = document.getElementsByTagName(e)[0];
+          a.parentNode.insertBefore(o, a);
+        }
+        (t.MooTrackerObject = a),
+          (t[a] =
+            t[a] ||
+            function() {
+              return t[a].q
+                ? void t[a].q.push(arguments)
+                : void (t[a].q = [arguments]);
+            }),
+          window.attachEvent
+            ? window.attachEvent("onload", d.bind(this, o))
+            : window.addEventListener("load", d.bind(this, o), !1);
+      })(
+        window,
+        document,
+        "script",
+        "//cdn.stat-track.com/statics/moosend-tracking.min.js",
+        "mootrack"
+      );
+      //tracker has to be initialized otherwise it will generate warnings and wont sendtracking events
+      mootrack("init", "fdeb3a8771164edeb686b2cbbae589e5");
+      mootrack('trackPageView');
+    </script>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="menu">
+        <div class="logo">
+          <h1>
+            Pixkal
+          </h1>
+        </div>
+        <div id="secciones" class="secciones">
+          <ul>
+            <li><a href="#research">&#60;UX Research/&#62;</a></li>
+            <li><a href="#thinking">!Remote Thinking Sessions</a></li>
+            <li><a href="#web">Web#AR Prototype</a></li>
+          </ul>
+        </div>
+
+        <a
+          href="javascript:void(0);"
+          onclick="desplegarMenu()"
+          class="hamburguesa"
+          >&#9776;</a
+        >
+      </div>
+    </header>
+    <section>
+      <div class="principal">
+        
+Pixkal, con domicilio en Primera Cerrada de Ceboruco #11 Colonia Azteca, Municipio de Toluca, Estado de México, es responsable de
+recabar sus datos personales, del uso que se le dé a los mismos y de su protección.
+Su información personal será utilizada para proveer los servicios y productos que ha solicitado,
+informarle sobre cambios en los mismos y evaluar la calidad del servicio que le brindamos. Para las
+finalidades antes mencionadas, requerimos obtener los siguientes datos personales: Nombre, 
+considerado como sensible según la Ley Federal de Protección de Datos Personales en
+Posesión de los Particulares.
+        
+Usted tiene derecho de acceder, rectificar y cancelar sus datos personales, así como de oponerse
+al tratamiento de los mismos o revocar el consentimiento que para tal fin nos haya otorgado, a
+través de los procedimientos que hemos implementado. Para conocer dichos procedimientos, los
+requisitos y plazos, se puede poner en contacto con nuestro departamento de datos personales en
+contacto@pixkal.com o visitar nuestra página de Internet https://www.pixkal.com
+        
+Si usted no manifiesta su oposición para que sus datos personales sean transferidos,
+se entenderá que ha otorgado su consentimiento para ello. 
+        
+      
+Si usted desea dejar de recibir mensajes promocionales de nuestra parte puede solicitarlo a través
+de contacto@pixkal.com .
+        
+Cualquier modificación a este aviso de privacidad podrá consultarla en nuestra página web https://www.pixkal.com
+
+Fecha última actualización [26/01/2021]
+        
+      </div>
+    </section>
+    <footer>
+      <div class="pie">
+        <ul>
+          <li><a href="mailto:contacto@pixkal.com">Contacto</a></li>
+          <li><a href="https://medium.com/@pixkal">Medium</a></li>
+          <li><a href="https://instagram.com/pixkal_ux/">Instagram</a></li>
+          <li><a href="privacidad.html">Política de privacidad</a></li>
+          <li><a href="condiciones.html">Términos y condiciones</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <script>
+      function desplegarMenu() {
+        var x = document.getElementById("secciones");
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "block";
+        }
+      }
+    </script>
+  </body>
+</html>
